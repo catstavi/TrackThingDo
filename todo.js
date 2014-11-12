@@ -46,5 +46,5 @@ function checkClear() {
 }
 
 function clearList() {
-  console.log("remove all lis");
+  $("li").remove();
 }
