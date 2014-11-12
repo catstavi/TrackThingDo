@@ -31,9 +31,11 @@ function goodInput(input) {
 }
 
 function allDone() {
-
-
-  
+  var $allTasks = $("li");
+  var $doneTasks = $("li.done");
+  if ($allTasks.length == $doneTasks.length) {
+    return true;
+  }
 }
 
 function checkClear() {
