@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Ada's To Do List</title>
+  <style>
+  .done {
+    text-decoration: line-through;
+  }
+
+  li {
+    list-style: none;
+  }
+   </style>
+  <script src="http://code.jquery.com/jquery-latest.min.js"> </script>
+  <script src= "todo.js"> </script>
+</head>
+<body>
+<header>
+    <h1>Do Tracker</h1>
+    <h3> Track Your Dos </h3>
+</header>
+<section>
+    <form>
+        <input type="text" id="task" placeholder="task">
+        <button id="addTask">add</button>
+    </form>
+    <ul id="list">
+
+    </ul>
+</section>
+</body>
+</html>
