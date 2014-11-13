@@ -1,19 +1,34 @@
 .done {
   text-decoration: line-through;
-  background-color: gray;
+  background-color: lightgray;
 }
 
 li {
   list-style: none;
-  background-color: lightblue;
+  background-color: lightgreen;
 }
 
 body {
   font-family: Arvo;
+  background-color: lightblue;
+}
+
+section {
+  margin: 3em;
+}
+
+h1 {
+  font-size: 3em;
 }
 
 header {
   background-color: purple;
+  padding: 1em;
+  border-bottom: 4px dotted black;
+}
+
+form {
+
 }
 
 strong {
