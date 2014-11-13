@@ -1,11 +1,11 @@
-.done {
-  text-decoration: line-through;
-  background-color: lightgray;
-}
 
 li {
   list-style: none;
   background-color: lightgreen;
+  padding-top: .5em;
+  padding-bottom: .5em;
+  padding-left: 1em;
+  font-size: 2em;
 }
 
 body {
@@ -15,6 +15,7 @@ body {
 
 section {
   margin: 3em;
+  margin-left: 5em;
 }
 
 h1 {
@@ -34,7 +35,7 @@ form {
 button {
   font-size: 2em;
   border-radius: 10px;
-  background-color: lightgreen;
+  background-color: #90EE65;
   border: 2px solid black;
 }
 
@@ -54,17 +55,27 @@ input[type="text"] {
   width: 10em;
 }
 
-li {
-  padding-top: .5em;
-  padding-bottom: .5em;
-  padding-left: 1em;
-  font-size: 2em;
-}
-
 strong {
   font-weight: 800;
 }
 
 em {
   font-style: italic;
+}
+/*
+.lightgreen{
+  background-color: lightgreen;
+}*/
+
+.medgreen {
+  background-color: #82D682;
+}
+
+.done {
+  text-decoration: line-through;
+  background-color: lightgray;
+}
+
+#removeTasks {
+  float: right;
 }

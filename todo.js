@@ -14,14 +14,29 @@ function addDo(input) {
     $newLI.click(clickHandler);
     $newLI.hide().fadeIn(700);
     $("#list").append($newLI);
+    setLiColors();
   }
+}
+
+function setLiColors() {
+  var count = 1;
+  $("li").each( function() {
+    if (count % 2 === 0 ) {
+      $(this).addClass("medgreen");
+    } else {
+      $(this).removeClass("medgreen");
+    }
+    count ++;
+  });
 }
 
 function clickHandler() {
   $(this).toggleClass("done");
-  if (allDone()) {
-    checkClear();
-  }
+  // no longer needed, b/c clear button
+  // if (allDone()) {
+    // checkClear();
+  // }
+  //
 }
 
 function goodInput(input) {
@@ -56,5 +71,7 @@ function clearList() {
 function clearDone() {
   $("li.done").fadeOut(700, function() {
     $(this).remove();
+    setLiColors();
   });
+
 }
