@@ -6,6 +6,7 @@ $(function() {
     document.forms[0].reset();
   });
   $("#removeTasks").click(clearDone);
+  $("ul").sortable();
 });
 
 function addDo(input) {
@@ -15,6 +16,7 @@ function addDo(input) {
     $newLI.hide().fadeIn(700);
     $("#list").append($newLI);
     setLiColors();
+    addTaskMessage("Task added.");
   }
 }
 
@@ -32,11 +34,11 @@ function setLiColors() {
 
 function clickHandler() {
   $(this).toggleClass("done");
-  // no longer needed, b/c clear button
-  // if (allDone()) {
-    // checkClear();
-  // }
-  //
+}
+
+function addTaskMessage(text) {
+  var $message = $("<p>" + text + "</p>");
+  $("#messages").append($message);
 }
 
 function goodInput(input) {
@@ -47,31 +49,10 @@ function goodInput(input) {
   }
 }
 
-function allDone() {
-  var $allTasks = $("li");
-  var $doneTasks = $("li.done");
-  if ($allTasks.length == $doneTasks.length) {
-    return true;
-  }
-}
-
-function checkClear() {
-  response = confirm("Do you want to clear your list?");
-  if (response) {
-    clearList();
-  }
-}
-
-function clearList() {
-  $("li").fadeOut(700, function() {
-    $(this).remove();
-  });
-}
-
 function clearDone() {
   $("li.done").fadeOut(700, function() {
     $(this).remove();
     setLiColors();
   });
-
+  addTaskMessage("Completed tasks removed.");
 }

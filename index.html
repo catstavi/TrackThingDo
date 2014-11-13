@@ -7,21 +7,27 @@
     <link type = "text/css" rel= "stylesheet" href = "style.css" />
     <link href='http://fonts.googleapis.com/css?family=Arvo:400,700,400italic' rel='stylesheet' type='text/css'>
   <script src="http://code.jquery.com/jquery-latest.min.js"> </script>
+  <script src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
   <script src= "todo.js"> </script>
 </head>
 <body>
-<header>
-    <h1><strong>Do Tracker: </strong> <em>Track Your Dos</em></h1>
-</header>
-<section>
-    <form>
-        <input type="text" id="task" placeholder="put your do here">
-        <button id="addTask"> add </button>
-    </form>
-    <ul id="list">
+  <header>
+      <h1><strong>Do Tracker: </strong> <em>Track Your Dos</em></h1>
+  </header>
+  <section>
+      <span id="messages" aria-live="assertive"
+      aria-channel= "general" class="visuallyhidden"> </span>
+      <form>
+        <label>
+          <span class="label visuallyhidden">Enter a task for the to-do list</span>
+          <input type="text" id="task" placeholder="put your do here">
+        </label>
+          <button id="addTask"> add </button>
+      </form>
+      <ul id="list">
 
-    </ul>
-    <button id="removeTasks"> clear completed </button>
-</section>
+      </ul>
+      <button id="removeTasks"> clear completed </button>
+  </section>
 </body>
 </html>
