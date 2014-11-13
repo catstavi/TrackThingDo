@@ -5,6 +5,7 @@ $(function() {
     addDo(input);
     document.forms[0].reset();
   });
+  $("#removeTasks").click(clearDone);
 });
 
 function addDo(input) {
@@ -48,6 +49,12 @@ function checkClear() {
 
 function clearList() {
   $("li").fadeOut(700, function() {
+    $(this).remove();
+  });
+}
+
+function clearDone() {
+  $("li.done").fadeOut(700, function() {
     $(this).remove();
   });
 }
