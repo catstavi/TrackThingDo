@@ -11,6 +11,7 @@ function addDo(input) {
   if (goodInput(input)) {
     var $newLI = $("<li>" + input + "</li>");
     $newLI.click(clickHandler);
+    $newLI.hide().fadeIn(700);
     $("#list").append($newLI);
   }
 }
@@ -46,5 +47,7 @@ function checkClear() {
 }
 
 function clearList() {
-  $("li").remove();
+  $("li").fadeOut(700, function() {
+    $(this).remove();
+  });
 }

@@ -3,26 +3,19 @@
 <head>
   <meta charset="utf-8">
   <title>Ada's To Do List</title>
-  <style>
-  .done {
-    text-decoration: line-through;
-  }
-
-  li {
-    list-style: none;
-  }
-   </style>
+    <link type = "text/css" rel= "stylesheet" href = "resets.css" />
+    <link type = "text/css" rel= "stylesheet" href = "style.css" />
+    <link href='http://fonts.googleapis.com/css?family=Arvo:400,700,400italic' rel='stylesheet' type='text/css'>
   <script src="http://code.jquery.com/jquery-latest.min.js"> </script>
   <script src= "todo.js"> </script>
 </head>
 <body>
 <header>
-    <h1>Do Tracker</h1>
-    <h3> Track Your Dos </h3>
+    <h1><strong>Do Tracker: </strong> <em> Track Your Dos</em></h1>
 </header>
 <section>
     <form>
-        <input type="text" id="task" placeholder="task">
+        <input type="text" id="task" placeholder="put do here">
         <button id="addTask">add</button>
     </form>
     <ul id="list">
